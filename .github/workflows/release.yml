@@ -28,7 +28,7 @@ jobs:
       - run: "npm i -g npm@9.5.1"
       - run: "npm -v"
 #     SHA of latest commit in feat/provenance branch
-      - uses: AlanSl/optic-release-automation-action@ac513507d923fe113dfa0800750392ffe5b91abf
+      - uses: AlanSl/optic-release-automation-action@9621c9cda16b36e58022691b78c470baf57f414d
         with:
           semver: ${{ github.event.inputs.semver }}
           commit-message: 'chore: release {version}'
@@ -36,3 +36,4 @@ jobs:
           optic-token: ${{ secrets[format('OPTIC_TOKEN_{0}', github.actor)] || secrets.OPTIC_TOKEN }}
           build-command: npm ci
           provenance: true
+          access: 'public'
