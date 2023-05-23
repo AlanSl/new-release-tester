@@ -28,7 +28,7 @@ jobs:
       - run: "npm i -g npm@9.5.1"
       - run: "npm -v"
 #     SHA of latest commit in feat/provenance branch
-      - uses: nearform-actions/optic-release-automation-action@v4
+      - uses: AlanSl/optic-release-automation-action@pr/302-access
         with:
           semver: ${{ github.event.inputs.semver }}
           commit-message: 'chore: release {version}'
